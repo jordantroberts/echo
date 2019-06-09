@@ -3,7 +3,7 @@ class Echo
   def echo
     puts "Say something"
     phrase = gets.chomp!
-    return phrase 
+    return 'You said: ' + phrase 
   end
 
 end
