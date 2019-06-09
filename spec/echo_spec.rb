@@ -4,6 +4,11 @@ describe Echo do
 
 let(:echo) { described_class.new }
 
+before do
+  allow($stdout).to receive(:write)
+  allow(echo).to receive(:gets).and_return("hello\n")
+end
+
   describe '#echo' do
     it 'repeats the user input' do
       allow(Date).to receive(:today).and_return Date.new(2019,6,10)
