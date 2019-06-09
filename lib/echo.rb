@@ -1,7 +1,9 @@
 class Echo
 
   def echo
-    "hello"
+    puts "Say something"
+    phrase = gets.chomp!
+    return phrase 
   end
 
 end
